@@ -1,0 +1,2 @@
+@import "tailwindcss";
+@source "../../../packages/lib/**/*.{js,ts,jsx,tsx}";
