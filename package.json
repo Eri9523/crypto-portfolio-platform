@@ -1,0 +1,16 @@
+{
+  "name": "monorepo-template",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.27",
+    "vite": "^7.3.0"
+  }
+}
