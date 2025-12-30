@@ -139,12 +139,13 @@ export class MoralisAdapter implements NFTRepositoryPort {
     if (params.cursor) {
       queryParams.cursor = params.cursor;
     }
-
+    
     const response = await this.makeRequest<any>(
       `/${params.address}/nft`,
       queryParams
     );
-
+    
+    
     return {
       data: (response.result || []).map((item: any) => this.mapToNFT(item)),
       cursor: response.cursor || null,
