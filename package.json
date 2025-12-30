@@ -9,15 +9,22 @@
     "dev": "npm run dev --workspace=apps/web",
     "build": "npm run build --workspace=apps/web",
     "dev:api": "npm run dev --workspace=apps/api",
-    "start:api": "npm run start --workspace=apps/api"
+    "start:api": "npm run start --workspace=apps/api",
+    "test:api": "jest --config=apps/api/jest.config.js"
   },
   "devDependencies": {
     "@types/axios": "^0.9.36",
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20.19.27",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^11.0.1",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.6",
     "vite": "^7.3.0"
   },
   "dependencies": {
