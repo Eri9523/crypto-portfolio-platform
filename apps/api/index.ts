@@ -1,23 +1,6 @@
-import express, { Application } from "express";
-import cors from "cors";
 import { config } from "./infrastructure/config/environment";
 import { connectDatabase } from "./infrastructure/database/mongo/connection";
-
-const app: Application = express();
-
-app.use(cors({ origin: config.cors.origin, credentials: true }));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.get("/health", (_req, res) => {
-  res.json({ status: "ok", timeStamp: new Date().toISOString() });
-});
-
-import authRoutes from "./infrastructure/http/routes/authRoutes";
-import { errorHandler } from "./infrastructure/http/middlewares/errorHandler";
-
-app.use("/api/auth", authRoutes);
-app.use(errorHandler);
+import app from "./app";
 
 const startServer = async () => {
   try {
@@ -36,5 +19,3 @@ const startServer = async () => {
 };
 
 startServer();
-
-export default app;
