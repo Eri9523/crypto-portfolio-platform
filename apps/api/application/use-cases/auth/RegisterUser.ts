@@ -1,8 +1,7 @@
 import bcrypt from "bcrypt";
 import { IUserRepository } from "../../../domain/repositories/IUserRepository";
-import { UserEntity, UserEntity } from "../../../domain/entities/User";
+import { UserEntity } from "../../../domain/entities/User";
 import { JwtService } from "../../../infrastructure/config/jwt";
-import { Jwt } from "jsonwebtoken";
 
 export interface RegisterUserDto {
   email: string;

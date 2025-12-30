@@ -1,4 +1,3 @@
-import { JSX } from "react/jsx-runtime";
 import { IUserRepository } from "../../../domain/repositories/IUserRepository";
 import { JwtService } from "../../../infrastructure/config/jwt";
 

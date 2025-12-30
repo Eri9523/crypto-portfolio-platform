@@ -19,7 +19,7 @@ export class JwtService {
 
   generateRefreshToken(payload: TokenPayload): string {
     const options: SignOptions = {
-      expiresIn: config.jwt.refreshSecret as any,
+      expiresIn: config.jwt.refreshExpiresIn as any,
     };
     if (!config.jwt.refreshSecret)
       throw new Error("JWT_REFRESH_SECRET is not defined in environment variables");
@@ -29,7 +29,7 @@ export class JwtService {
 
   verifyAccessToken(token: string): TokenPayload {
     try{
-        return jwt.verify(token, config.jwt.refreshSecret!) as TokenPayload;
+        return jwt.verify(token, config.jwt.secret!) as TokenPayload;
     }catch(error){
         throw new Error('Invalid or expred refresh token')
     }
