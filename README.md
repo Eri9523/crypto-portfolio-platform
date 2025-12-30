@@ -90,6 +90,24 @@ npm run build --workspace=api
 - `npm run build` – Build web app
 - `npm run build --workspace=api` – Build API
 
+## Testing
+
+API tests are written with Jest, Supertest, and use mongodb-memory-server for fast, isolated integration tests.
+
+**Run all API tests:**
+
+```bash
+npm run test:api
+```
+
+Test files are located in `apps/api/tests/`.
+
+**Test environment setup:**
+
+MongoDB is mocked in tests using mongodb-memory-server. See `apps/api/tests/setup.ts` for details.
+
+You can add more tests for endpoints like `/api/auth/login`, `/health`, etc.
+
 ## Tech Stack
 
 - React 19, Vite, Tailwind CSS
