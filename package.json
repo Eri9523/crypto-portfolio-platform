@@ -10,7 +10,20 @@
     "build": "npm run build --workspace=apps/web"
   },
   "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20.19.27",
     "vite": "^7.3.0"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.2",
+    "zustand": "^5.0.9"
   }
 }
